@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/45911/Desktop/DataScience/Semester4/deep_leraning/project/project/project/mlruns/0/d4451ee5c502470da8cf010481bfabc5/artifacts
+end_time: 1713960843990
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d4451ee5c502470da8cf010481bfabc5
+run_name: our_awesome_BERT_model
+run_uuid: d4451ee5c502470da8cf010481bfabc5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713958878530
+status: 3
+tags: []
+user_id: '45911'
