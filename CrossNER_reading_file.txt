@@ -1,0 +1,55 @@
+label2id_crossNER = {
+    'O': 0,
+    'B-location': 1,
+    'I-location': 2,
+    'B-person': 3,
+    'B-organisation': 4,
+    'I-organisation': 5,
+    'I-person': 6,
+    'B-misc': 0,
+    'I-misc': 0
+}
+
+def parse_iob2_content_crossNER(content):
+    data = []
+    sen_id = 0
+    temp_dic = {}
+    temp_dic['id'] = sen_id
+    temp_dic['tokens'] = []
+    temp_dic['ner_tags'] = []
+    prev_line = 'start' #added
+    for line in content.split('\n'):
+        
+        line = line.strip()
+        if line == '' and prev_line != '': #if line is empty and the previous line wasn't empty as well
+            
+            data.append(temp_dic)
+            temp_dic = {}
+            sen_id+= 1
+            temp_dic['id'] = sen_id
+            temp_dic['tokens'] = []
+            temp_dic['ner_tags'] = []
+        elif line:
+            parts = line.split('\t')
+            temp_dic['tokens'].append(parts[0])
+            temp_dic['ner_tags'].append(label2id_crossNER[parts[1]])
+        prev_line = line #added
+    return data
+
+# Parse training data
+with open('crossNER_train.txt', 'r', encoding='utf-8') as file:
+    content_crossNER_train = file.read()
+
+
+
+crossNER_train_data = parse_iob2_content_crossNER(content_crossNER_train)
+
+tokeized_train_crossNER = []
+for i in crossNER_train_data:
+    #print(i)
+    t = tokenize_and_align_labels(i)
+    tokeized_train_crossNER.append(t)
+
+tokeized_train_crossNER
+
+
