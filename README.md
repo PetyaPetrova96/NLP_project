@@ -1,12 +1,13 @@
-# Named Entity Recognition (NER) Comparative Analysis: BiLSTM vs. BERT
+# Cross-Domain Comparison of BERT and BiLSTM for Performing NER
+
 
 ## Introduction
 
-Named Entity Recognition (NER) is a fundamental task in Natural Language Processing (NLP), involving the extraction and classification of named entities from text. However, NER presents challenges due to language ambiguity, inconsistencies in annotations, and the presence of unfamiliar words. In this project, we aim to compare the performance of two generations of deep learning models for NER, specifically focusing on their ability to generalize to unseen data domains.
+Named Entity Recognition (NER) is a fundamental task in Natural Language Processing (NLP), involving the extraction and classification of named entities from text. In this project, we aim to compare the performance of two generations of deep learning models for NER, specifically focusing on their ability to generalize to unseen data domains.
 
 ## Goal
 
-Our primary goal is to assess how two prominent deep learning models, Bidirectional Long Short-Term Memory (BiLSTM) and Bidirectional Encoder Representations from Transformers (BERT), perform in NER tasks across different text genres. We seek to investigate their generalizability by evaluating their performance on datasets representing diverse domains.
+Our primary goal is to assess how two prominent deep learning models, Bidirectional Long Short-Term Memory (BiLSTM) and Bidirectional Encoder Representations from Transformers (BERT), perform in NER tasks across different text genres.
 
 ## Methodology
 
@@ -26,6 +27,4 @@ Our analysis reveals several key findings:
 
 In conclusion, our study highlights the significant performance gap between BERT and BiLSTM in NER tasks, particularly concerning generalization to cross-domain data. BERT's robustness and superior performance underscore its suitability for a wide range of NLP applications, especially those involving diverse text genres. Future research could explore hybrid approaches or fine-tuning strategies to further enhance NER performance across different domains.
 
-## Acknowledgments
 
-We extend our gratitude to [acknowledge contributors or institutions] for their support and guidance throughout this project.
